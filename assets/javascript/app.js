@@ -1,6 +1,8 @@
+// Array that contains initial button topics
 var topics = ["Halo", "Counter Strike", "MineSweeper", "Minecraft", "Fortnite", "GTA V", "Modern Warfare", "Skyrim",
   "The Witcher", "Overwatch", "PUBG", "Tetris", "World of Warcraft"];
 
+// When submit button is clicked, value is stored so that new buttons can be output
 $("#submit").on("click", function (event) {
   event.preventDefault();
 
@@ -11,6 +13,7 @@ $("#submit").on("click", function (event) {
 
 });
 
+// Function that will display gifs when a game button is clicked
 function displayGameGifs() {
   $("#gif-output").empty();
   var game = $(this).attr("game-name");
@@ -45,6 +48,7 @@ function displayGameGifs() {
     });
 };
 
+// Function that will output buttons on page load
 function buttonOutput() {
   $("#buttons").empty();
 
@@ -60,6 +64,7 @@ function buttonOutput() {
   }
 };
 
+// Event listener that will change image state when an image is clicked
 $(document.body).on("click", ".image", function() {
   console.log("State function called");
   var state = $(this).attr("state");
